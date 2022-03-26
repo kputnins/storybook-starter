@@ -1,0 +1,15 @@
+.Checkbox {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+
+  input {
+    margin-right: 0.5rem;
+  }
+
+  .Label {
+    &.Checked {
+      color: blue;
+    }
+  }
+}
