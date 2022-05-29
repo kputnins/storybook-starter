@@ -1,0 +1,64 @@
+@use '~/src/styles/colors';
+
+.Dropdown {
+  width: fit-content;
+
+  .Menu {
+    display: none;
+    width: 100%;
+    background-color: colors.$primary-color;
+    margin-top: 0.25rem;
+    border: 1px solid colors.$primary-color;
+    border-radius: 0.25rem;
+
+    &.Open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: white;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    button:last-of-type {
+      border-bottom-left-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+
+    button:first-of-type {
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+  }
+
+  &.Secondary {
+    .Menu {
+      border: 1px solid colors.$primary-color;
+      background-color: transparent;
+
+      button {
+        background-color: transparent;
+        border: 1px solid transparent;
+        color: colors.$primary-color;
+
+        &:hover {
+          background-color: rgba(0, 0, 128, 0.05);
+        }
+
+        &:focus {
+          background-color: rgba(0, 0, 128, 0.1);
+        }
+      }
+    }
+  }
+}

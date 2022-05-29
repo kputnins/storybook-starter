@@ -1,0 +1,79 @@
+@use '~/src/styles/colors';
+
+$shadow-color: rgba(0, 0, 128, 0.2);
+$icon-margin: 0.3rem;
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+
+  span:nth-of-type(2) {
+    margin-left: $icon-margin;
+  }
+
+  &.NoLabel {
+    span:nth-of-type(2) {
+      margin-left: 0;
+    }
+  }
+
+  &.TrailingIcon {
+    flex-direction: row-reverse;
+
+    span:nth-of-type(1) {
+      margin-left: $icon-margin;
+    }
+
+    &.NoLabel {
+      span:nth-of-type(1) {
+        margin-left: 0;
+      }
+    }
+
+    span:nth-of-type(2) {
+      margin-left: 0;
+    }
+  }
+
+  &.Primary {
+    background-color: colors.$primary-color;
+    color: white;
+    border-color: colors.$primary-color;
+
+    &:hover {
+      background-color: rgba(0, 0, 128, 0.7);
+    }
+
+    &:focus {
+      background-color: rgba(0, 0, 128, 0.5);
+    }
+  }
+
+  &.Secondary {
+    background-color: transparent;
+    color: colors.$primary-color;
+    border-color: colors.$primary-color;
+
+    &:hover {
+      background-color: rgba(0, 0, 128, 0.1);
+    }
+
+    &:focus {
+      background-color: rgba(0, 0, 128, 0.2);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 2px 2px $shadow-color;
+  }
+
+  &:focus {
+    outline: 1px solid lightblue;
+    outline-offset: 2px;
+  }
+}
