@@ -5,7 +5,7 @@ import Label, { LabelProps } from "./Label";
 
 export default {
   component: Label,
-  title: "Common/Label",
+  title: "Atoms/Label",
 } as Meta;
 
 const Template: Story<LabelProps> = (args) => <Label {...args} />;

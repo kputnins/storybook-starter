@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default {
   component: Checkbox,
-  title: "Inputs/Checkbox",
+  title: "Molecules/Checkbox",
   argTypes: {
     label: {
       description: "Label for the checkbox. Can be string or React element",

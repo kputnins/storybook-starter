@@ -1,7 +1,7 @@
 import { ChangeEventHandler, VFC } from "react";
 import classNames from "classnames";
 
-import Label from "../../common/Label/Label";
+import Label from "../../atoms/Label/Label";
 
 import styles from "./Checkbox.module.scss";
 

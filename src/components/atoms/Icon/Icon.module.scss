@@ -1,0 +1,19 @@
+.Icon {
+  &.Small {
+    svg {
+      width: 0.5rem;
+    }
+  }
+
+  &.Medium {
+    svg {
+      width: 1rem;
+    }
+  }
+
+  &.Large {
+    svg {
+      width: 2rem;
+    }
+  }
+}
